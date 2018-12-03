@@ -46,12 +46,11 @@ attemptsRemainingElement.innerHTML = allowedGuesses;
 // ---------------------------------------------------------------------------------------------------
 
 function updateGuesses(letter) {
-    // allowedGuesses--;
-    attemptsRemainingElement.innerHTML = allowedGuesses;
 
     if (randomChoice.indexOf(letter) === -1) {
     wrongGuesses.push(letter);
     guessedLettersElement.innerHTML = wrongGuesses.join(", ");
+    attemptsRemainingElement.innerHTML = allowedGuesses--;
     } else {
 
         for (var i = 0; i < randomChoice.length; i++) {
