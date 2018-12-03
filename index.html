@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=media-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=media-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Christmas Theme</title>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 </head>
@@ -21,30 +21,36 @@
 
     <div class="container">
 
-        <div class="hint-box text-center">
-            hint
-        </div>
+        <!-- <div class="hint-box text-center">
+            <p id="hintBox">hint</p>
+        </div> -->
 
         <div class="img-box">
-            <img class="l-box" src="assets/images/homeAlone.jpg" alt="home alone">
+            <img class="l-box" src="assets/images/christmas-carols.jpg" alt="Christmas Carols">
         </div>    
     
     </div>
 
     <div class="container marg-left text-center">
-            
-        <div class="question text-center">
-                Question
+        
+        <div class="h1-box  text-center">
+            <h1>Press any key to start!</h1>
+        </div>    
+        <div class="h1-box  text-center">
+            <h1 id="randomChoice"></h1>
         </div>
-        <div class="guess text-center">
-                guess
+        <div class="right-row  text-center">
+            <p id="guessedLetters"></p>
         </div>
-        <div class="g-letter text-center">
-                guess letter
+        <div class="right-row  text-center">
+            <p id="attemptsRemaining"></p>
         </div>
-        <div class="g-remain text-center">
-                guesses remaining
+        <div class="win-loss">
+            <p>wins: <span id="wins"></span></p>
         </div>
+        <div class="win-loss">
+            <p>losses: <span id="losses"></span></p>
+        </div> 
            
     </div>
     

@@ -46,6 +46,7 @@ left image box
 .l-box {
     height: 350px;
     width: 100%;
+    margin-top: 40px;
 }
 
 .img-box {
@@ -66,10 +67,9 @@ word guess boxes
 */
 
 .container {
-    background-color:blue;
     color: lightblue;
     width: 35%;
-    height: 400px;
+    height: 435px;
     float:left;
     border: 1px solid red;
 }
@@ -78,29 +78,31 @@ word guess boxes
     margin-left: 30%;
 }
 
-.question {
+.press {
     width: 100%;
     border: 1px solid yellow;
-    height: 30%;
+    height: 50px;
 }
 
-.guess {
+.h1-box {
     width: 100%;
     border: 1px solid yellow;
-    height: 30%;
-    margin-top:2.5%;
+    height: 75px;
+    margin-top: 4%; 
 }
 
-.g-letter {
+.right-row {
     width: 100%;
     border: 1px solid yellow;
-    height: 20%;
-    margin-top:2.5%;
+    height: 50px;
+    margin-top: 4%;
+    /* background-color: white; */
 }
 
-.g-remain {
-    width: 100%;
+.win-loss {
+    width: 50%;
+    height: 50px;
     border: 1px solid yellow;
-    height: 10%;
-    margin-top: 2.5%;
+    float: right;
+    margin-top: 4%;
 }
