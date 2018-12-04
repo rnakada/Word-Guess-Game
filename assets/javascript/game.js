@@ -1,4 +1,5 @@
-//
+//Global Variable
+// ---------------------------------------------------------------------------------------------------
 
 var words = ["carol", "presents", "santa"];
 console.log (words);
@@ -10,6 +11,7 @@ var losses = 0;
 console.log (losses);
 
 //#ID
+// ---------------------------------------------------------------------------------------------------
 
 var randomChoiceElement = document.getElementById("randomChoice");
 console.log(randomChoiceElement);
@@ -21,9 +23,16 @@ var winsElement = document.getElementById("wins");
 console.log(winsElement);
 var lossesElement = document.getElementById("losses");
 console.log(lossesElement);
+
 // function
+// ---------------------------------------------------------------------------------------------------
 
 function game() {
+
+    wins = sessionStorage.getItem("winwin");
+    document.getElementById("wins").innerHTML = wins;
+    losses = sessionStorage.getItem("lossloss");
+    document.getElementById("losses").innerHTML = losses;
 
     words = randomChoice;
     correctGuesses = [];
@@ -51,13 +60,17 @@ function updateGuesses(letter) {
     wrongGuesses.push(letter);
     guessedLettersElement.innerHTML = wrongGuesses.join(", ");
     attemptsRemainingElement.innerHTML = allowedGuesses--;
-    } else {
+    } 
+
+    else {
 
         for (var i = 0; i < randomChoice.length; i++) {
         if (randomChoice[i] === letter) {
             correctGuesses[i] = letter;
         }
+
     }
+
 console.log(letter);
 // innerHTML
 
@@ -65,18 +78,23 @@ randomChoiceElement.innerHTML = correctGuesses.join(" ");
     }
 }
 
+// if (wrongGuesses = letter)
+
 // ---------------------------------------------------------------------------------------------------
 
 function checkWin() {
     if (correctGuesses.indexOf("_") === -1) {
-        alert("You Win"); winsElement.innerHTML = + 1; 
-    } else if (allowedGuesses === 0) {
-        alert("You Lose!"); lossesElement.innerHTML = + 1;
+        alert("You Win"); wins++; sessionStorage.setItem("winwin",wins); window.location.reload();
+    } else if (allowedGuesses === -1) {
+        alert("You Lose!"); losses++; sessionStorage.setItem("lossloss",losses); window.location.reload();
     }
 }
 
 winsElement.innerHTML = wins;
 lossesElement.innerHTML = losses;
+
+// ---------------------------------------------------------------------------------------------------
+ 
 // ---------------------------------------------------------------------------------------------------
 document.onkeyup = function (event) {
     var guessedLetters = String.fromCharCode(event.keyCode).toLowerCase();
